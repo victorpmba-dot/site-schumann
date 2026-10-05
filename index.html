@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Conservatório Musical Schumann</title>
+<meta name="description" content="30 anos em Ilhéus. Show A Trilha Sonora de uma Geração, 29 de outubro, no Centro de Convenções. Cursos de instrumento e canto, do iniciante ao avançado.">
+<meta name="theme-color" content="#17130D">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Conservatório Musical Schumann · 30 anos em Ilhéus">
+<meta property="og:description" content="Show A Trilha Sonora de uma Geração · 29 de outubro, 19h · Centro de Convenções de Ilhéus · Ingresso R$ 50 pelo WhatsApp.">
+<meta property="og:image" content="img/show-trilha-sonora.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Cormorant+Garamond:ital,wght@1,600&display=swap">
+<style>
+/* Layout: feito primeiro para o celular. Abre no palco (vídeo), a cortina vinho vende o show, e o resto é partitura clara. Tema claro por escolha. */
+:root{
+  --ouro:#E3A90B;--ouro-txt:#8A6400;--on-ouro:#17130D;
+  --ink:#17130D;--texto:#3A332A;--suave:#6F675C;
+  --fundo:#FFFDF8;--perg:#F5EFE2;--sup:#FFFFFF;--linha:#E4DCCB;
+  --vinho:#6B1D2A;--on-vinho:#FBEFD9;
+  --zap:#25D366;--on-zap:#06301A;
+  --c1:#FBF3E2;--c2:#EAF2FA;--c3:#FBEDEA;--c4:#EDF4EA;--c5:#F2EEF9;
+  --f-txt:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-tit:"Cormorant Garamond",ui-serif,Georgia,"Times New Roman",serif;
+  --r:20px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--fundo);color:var(--texto);font:400 16px/1.6 var(--f-txt);-webkit-font-smoothing:antialiased;margin:0}
+img,video{max-width:100%;display:block}
+a{color:var(--ouro-txt)}
+:focus-visible{outline:2px solid var(--ouro-txt);outline-offset:3px;border-radius:6px}
+h1,h2,h3,p{margin:0}
+h2{font:italic 600 clamp(36px,9.4vw,60px)/1 var(--f-tit);color:var(--ink);text-wrap:balance}
+h2 b{font-weight:600;color:var(--ouro-txt)}
+h3{font:800 18px/1.25 var(--f-txt);color:var(--ink);letter-spacing:-.01em}
+p{text-wrap:pretty}
+.w{max-width:1120px;margin:auto;padding-inline:20px}
+section{padding-block:60px}
+.rot{font:800 11px/1 var(--f-txt);letter-spacing:.22em;text-transform:uppercase;color:var(--ouro-txt);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.rot::before{content:"";width:22px;height:2px;background:var(--ouro)}
+.sub{font-size:16.5px;color:var(--suave);max-width:34em;margin-top:16px}
+.micro{font-size:13px;color:var(--suave);margin-top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;background:var(--ouro);color:var(--on-ouro);font:800 15.5px/1.15 var(--f-txt);text-decoration:none;border:0;cursor:pointer;text-align:center}
+.btn:active{transform:scale(.98)}
+.btn.zap{position:relative;overflow:hidden;color:#03260F;background:linear-gradient(180deg,#5BF08F 0,#25D366 45%,#0FAE4B 100%);box-shadow:inset 0 2px 0 rgb(255 255 255/.65),inset 0 -3px 0 rgb(0 70 25/.35),0 0 0 2px #0B8F3D,0 12px 30px -8px rgb(37 211 102/.85);text-shadow:0 1px 0 rgb(255 255 255/.45)}
+.btn.zap::before{content:"";position:absolute;inset:-30% auto -30% -40%;width:28%;background:linear-gradient(90deg,transparent,rgb(255 255 255/.8),transparent);rotate:20deg;animation:varre 2.8s ease-in-out infinite;pointer-events:none}
+@keyframes varre{0%,40%{translate:0 0}100%{translate:620% 0}}
+.faisca{position:relative;width:100%;display:block}
+.faisca::before,.faisca::after{content:"";position:absolute;top:50%;width:26px;height:26px;margin-top:-13px;background:#FFE9A8;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:pisca 1.6s ease-in-out infinite;z-index:3;filter:drop-shadow(0 0 6px #FFD75A)}
+.faisca::before{left:-9px;top:8%}
+.faisca::after{right:-9px;top:88%;animation-delay:.8s;width:20px;height:20px}
+@keyframes pisca{0%,100%{scale:.35;opacity:.25;rotate:0deg}50%{scale:1.15;opacity:1;rotate:45deg}}
+.btn.vidro{background:rgb(255 255 255/.14);color:#fff;box-shadow:inset 0 0 0 1.5px rgb(255 255 255/.55)}
+.btn.sec{background:var(--sup);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--linha)}
+.btn.peq{min-height:44px;padding:0 18px;font-size:14px}
+.btn svg{flex:none}
+.sel{user-select:all}
+
+/* ---------- topo (sempre Preto Palco, logo em ouro) ---------- */
+.topo{position:fixed;inset:0 0 auto 0;z-index:30;padding-top:env(safe-area-inset-top,0px);background:rgb(23 19 13/.94);box-shadow:0 1px 0 rgb(227 169 11/.45)}
+.topo .w{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ouro);min-width:0}
+.logo svg{flex:none;width:46px;height:auto;filter:drop-shadow(0 1px 0 #8A6400)}
+.logo span{display:grid;line-height:1}
+.logo small{font:600 8px/1 var(--f-txt);letter-spacing:.24em;text-transform:uppercase;white-space:nowrap;color:#F3D48A}
+.logo b{font:800 19px/1 var(--f-txt);margin-top:4px;letter-spacing:.01em;padding-bottom:4px;border-bottom:1.5px solid var(--ouro)}
+.nav{display:none}
+.topo .btn{box-shadow:0 0 0 1px #FFE08A inset}
+@media(min-width:1000px){
+  .nav{display:flex;gap:24px;margin-left:auto;margin-right:10px}
+  .nav a{color:#F6EBD2;text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap}
+  .nav a:hover{color:var(--ouro)}
+  .topo .w{min-height:76px}.logo svg{width:58px}.logo b{font-size:24px}.logo small{font-size:9.5px}
+}
+
+/* ---------- abertura ---------- */
+.abertura{position:relative;min-height:100svh;display:grid;place-items:center;padding:calc(96px + env(safe-area-inset-top,0px)) 0 72px;overflow:hidden;background:var(--ink);isolation:isolate;color:#fff;text-align:center}
+.telas{position:absolute;inset:0;z-index:-2;display:grid;grid-template-columns:1fr}
+.telas video,.telas img{width:100%;height:100%;object-fit:cover;grid-area:1/1}
+.veu{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(23 19 13/.72),rgb(23 19 13/.5) 45%,rgb(23 19 13/.86))}
+.abre{display:grid;justify-items:center;padding-inline:20px;max-width:760px}
+.selo{position:relative;width:176px;aspect-ratio:1;margin-bottom:16px;border-radius:50%;
+  background:radial-gradient(circle closest-side,transparent 61%,#FFE9A8 61.5% 63%,#17130D 63.5% 90.5%,#FFE9A8 91% 92.5%,transparent 93%),conic-gradient(from 20deg,#8A6400,#FFE9A8,#E3A90B,#8A6400,#FFF3C4,#E3A90B,#8A6400,#FFE9A8,#8A6400);
+  box-shadow:0 0 0 2px #17130D,0 0 0 4px #E3A90B,0 0 36px rgb(227 169 11/.55),0 14px 34px -10px #000}
+.selo .anel{position:absolute;inset:0;width:100%;height:100%;animation:gira 30s linear infinite}
+@keyframes gira{to{rotate:360deg}}
+.selo .anel text{font:800 9.6px var(--f-txt);fill:#FFE9A8;text-transform:uppercase}
+.foco{position:absolute;inset:22.5%;border-radius:50%;overflow:hidden;display:grid;place-content:center;color:var(--on-ouro);line-height:1;
+  background:radial-gradient(circle at 32% 24%,#FFF6D0 0,#FFD75A 26%,#E3A90B 58%,#A87400 100%);
+  box-shadow:0 0 0 2px #FFF1B8,0 0 0 4px #8A6400,inset 0 -6px 14px rgb(120 80 0/.55),inset 0 4px 10px rgb(255 255 255/.7)}
+.foco::after{content:"";position:absolute;inset:-20% auto -20% -60%;width:42%;background:linear-gradient(90deg,transparent,rgb(255 255 255/.85),transparent);rotate:18deg;animation:lampejo 3.6s ease-in-out infinite}
+@keyframes lampejo{0%,55%{translate:0 0}100%{translate:480% 0}}
+.foco b{font:800 50px/1 var(--f-txt);letter-spacing:-.04em;text-shadow:0 1px 0 #FFE9A8}
+.foco i{font:italic 600 21px/1 var(--f-tit);margin-top:-3px}
+.marca{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2.4vw,22px);color:#F2C230;margin:0}
+.marca svg{flex:none;width:clamp(74px,19vw,170px);height:auto;filter:drop-shadow(0 2px 0 #7A5600) drop-shadow(0 10px 18px rgb(0 0 0/.55))}
+.marca span{display:grid;text-align:left}
+.marca small{font:600 clamp(9.5px,2.5vw,20px)/1 var(--f-txt);letter-spacing:.2em;text-transform:uppercase;color:#FFF3D0;white-space:nowrap}
+.marca b{font:800 clamp(34px,9.6vw,92px)/1 var(--f-txt);letter-spacing:-.01em;margin-top:.12em;padding-bottom:.1em;border-bottom:2px solid #E3A90B;color:#F2C230;
+  background:linear-gradient(180deg,#FFF3B8 0,#F7CF4A 38%,#E3A90B 55%,#B67F00 78%,#FFE28A 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 3px 6px rgb(0 0 0/.55))}
+.lema{font:italic 600 clamp(24px,6.4vw,38px)/1.15 var(--f-tit);margin-top:18px;color:#fff}
+.lema b{font-weight:600;color:#FFC93C;display:inline-block;transition:opacity .4s ease,transform .4s ease}
+.lema b.sai{opacity:0;transform:translateY(-8px)}
+.acoes{display:grid;gap:10px;width:min(100%,360px);margin-top:22px}
+.chamada{width:min(100%,420px);margin-bottom:26px;padding:26px 18px 18px;border-radius:24px;background:var(--vinho);color:var(--on-vinho);box-shadow:0 0 0 2px var(--ouro),0 24px 50px -24px #000;position:relative;display:grid;gap:14px;justify-items:center}
+.carimbo{position:absolute;top:-15px;left:50%;translate:-50% 0;rotate:-3deg;padding:8px 16px;border-radius:8px;background:var(--ouro);color:var(--on-ouro);font:800 13px/1 var(--f-txt);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:0 6px 16px -6px #000}
+.ch-tit{font:600 13px/1.2 var(--f-txt);letter-spacing:.16em;text-transform:uppercase}
+.ch-tit b{display:block;font:italic 600 34px/1.05 var(--f-tit);letter-spacing:0;text-transform:none;color:#fff;margin-top:6px}
+.crono{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:100%}
+.crono div{padding:10px 4px 8px;border-radius:14px;background:#4A111B;box-shadow:inset 0 0 0 1px rgb(227 169 11/.45)}
+.crono b{display:block;font:800 30px/1 var(--f-txt);color:#FFC93C;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.crono small{display:block;font:600 10px/1 var(--f-txt);letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.ch-preco{font:600 14px/1.2 var(--f-txt)}
+.ch-preco s{opacity:.75;font-size:17px}
+.ch-preco b{font:800 26px/1 var(--f-txt);color:#FFC93C;margin-inline:4px}
+.chamada .btn{width:100%;min-height:62px;font-size:17.5px}
+.desce{position:absolute;left:50%;bottom:26px;translate:-50% 0;width:1.5px;height:34px;background:rgb(255 255 255/.7);animation:cai 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes cai{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+@media(min-width:700px){.selo{width:210px}.foco b{font-size:60px}.foco i{font-size:25px}.crono b{font-size:38px}.chamada{width:460px}}
+
+/* ---------- o show (Modo Palco: cortina vinho) ---------- */
+.show{background:var(--vinho);color:var(--on-vinho);padding-block:56px 64px;position:relative}
+.show .rot{color:#FFC93C}
+.show h2{color:#fff}
+.show h2 b{color:#FFC93C}
+.show .w{display:grid;gap:30px}
+.cartaz{position:relative;display:block;border-radius:18px;overflow:hidden;box-shadow:0 0 0 2px var(--ouro),0 30px 60px -30px #000;max-width:440px;margin-inline:auto;width:100%;background:var(--ink)}
+.cartaz img{width:100%;height:auto;aspect-ratio:2/3}
+.cartaz span{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 14px;background:var(--ouro);color:var(--on-ouro);font:800 15px/1 var(--f-txt);letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.cartaz{text-decoration:none}
+.esgotado{position:absolute;left:-8px;top:50%;rotate:-7deg;padding:12px 18px;background:var(--ouro);color:var(--on-ouro);font:800 17px/1.05 var(--f-txt);font-style:normal;letter-spacing:.08em;text-transform:uppercase;text-align:center;box-shadow:0 10px 24px -8px #000,inset 0 0 0 2px var(--on-ouro);outline:3px solid var(--ouro);border-radius:6px}
+.dados{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:1px;border-radius:16px;overflow:hidden;background:rgb(251 239 217/.22)}
+.dados li{display:grid;grid-template-columns:86px 1fr;gap:10px;align-items:baseline;padding:13px 16px;background:#5A1622}
+.dados small{font:800 10.5px/1 var(--f-txt);letter-spacing:.18em;text-transform:uppercase;color:#FFC93C}
+.dados b{font:600 15.5px/1.3 var(--f-txt);color:#fff}
+.compra{margin-top:22px;border-radius:22px;background:var(--fundo);color:var(--texto);padding:20px;display:grid;gap:16px}
+.bilhete{display:grid;grid-template-columns:.8fr 1.2fr;background:#0E0B07;border-radius:14px;color:#fff;position:relative;box-shadow:inset 0 0 0 2px var(--ouro),0 0 18px rgb(227 169 11/.45);text-align:center}
+.bilhete.um{grid-template-columns:1fr}
+.bilhete>div{padding:14px 8px 12px;display:grid;align-content:center;gap:4px}
+.bilhete .cheio{border-right:2px dashed rgb(227 169 11/.7)}
+.bilhete::before,.bilhete::after{content:"";position:absolute;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--fundo);box-shadow:inset 0 0 0 2px var(--ouro)}
+.bilhete::before{left:-9px}.bilhete::after{right:-9px}
+.bilhete small{font:800 10.5px/1.2 var(--f-txt);letter-spacing:.1em;text-transform:uppercase;color:#FFC93C}
+.bilhete small i{font-style:normal;color:#fff;letter-spacing:.02em}
+.bilhete .cheio small{display:inline-block;justify-self:center;padding:5px 9px;background:#C8161D;color:#fff;rotate:-4deg;border-radius:3px}
+.bilhete s{font:800 clamp(19px,5.4vw,26px)/1 var(--f-txt);color:#fff;text-decoration:line-through;text-decoration-color:#FF2A2A;text-decoration-thickness:3px}
+.bilhete b{font:800 clamp(30px,9vw,44px)/1 var(--f-txt);letter-spacing:-.02em;background:linear-gradient(180deg,#FFF3B8,#F7CF4A 45%,#D99A00);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#F7CF4A}
+.bilhete em{font:600 10.5px/1 var(--f-txt);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:#FFC93C}
+.compra-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.compra-top small{display:block;font:800 10.5px/1 var(--f-txt);letter-spacing:.18em;text-transform:uppercase;color:var(--ouro-txt);margin-bottom:6px}
+.compra-top b{font:800 30px/1 var(--f-txt);color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.qtd{display:flex;align-items:center;gap:4px;padding:4px;border-radius:999px;background:var(--perg)}
+.qtd button{width:46px;height:46px;border-radius:50%;border:0;background:var(--sup);color:var(--ink);font:800 22px/1 var(--f-txt);cursor:pointer;box-shadow:0 1px 0 var(--linha)}
+.qtd output{min-width:34px;text-align:center;font:800 18px var(--f-txt);color:var(--ink);font-variant-numeric:tabular-nums}
+.compra .btn{width:100%;min-height:62px;font-size:17px;position:relative}
+@keyframes pulso{0%{opacity:.75;transform:scale(.97)}100%{opacity:0;transform:scale(1.06)}}
+.compra p{font-size:13px;color:var(--suave);text-align:center}
+.falta.claro{background:var(--on-vinho)}
+.falta{display:inline-block;margin-top:14px;padding:6px 12px;border-radius:999px;background:var(--ouro);color:var(--on-ouro);font:800 12.5px/1 var(--f-txt)}
+@media(min-width:900px){.show .w{grid-template-columns:.8fr 1.2fr;align-items:center;gap:56px}.show{padding-block:88px}.dados{grid-template-columns:1fr 1fr}}
+
+/* ---------- valores ---------- */
+.valores{padding-block:16px;border-bottom:1px solid var(--linha);background:var(--sup);overflow:hidden}
+.trilho{display:flex;width:max-content;animation:corre 36s linear infinite}
+.trilho ul{display:flex;list-style:none;margin:0;padding:0}
+.trilho li{display:flex;align-items:center;gap:22px;padding-right:22px;font:800 13px/1 var(--f-txt);letter-spacing:.2em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+.trilho li::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--ouro)}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* ---------- história ---------- */
+.historia .w{display:grid;gap:34px}
+.marca-30 img{width:100%;height:auto;aspect-ratio:3/1;object-fit:cover;border-radius:16px}
+.linha-tempo{list-style:none;margin:0;padding:0;position:relative}
+.linha-tempo::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--linha)}
+.linha-tempo li{position:relative;padding:0 0 28px 44px}
+.linha-tempo li:last-child{padding-bottom:0}
+.linha-tempo li::before{content:"";position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;background:var(--fundo);box-shadow:inset 0 0 0 2px var(--ouro)}
+.linha-tempo li::after{content:"";position:absolute;left:7px;top:9px;width:10px;height:10px;border-radius:50%;background:var(--ouro)}
+.linha-tempo li.hoje::before{background:var(--ouro)}
+.linha-tempo li.hoje::after{background:var(--ink)}
+.ano{font:800 13px/1 var(--f-txt);letter-spacing:.14em;text-transform:uppercase;color:var(--ouro-txt)}
+.linha-tempo h3{font:italic 600 27px/1.1 var(--f-tit);margin-top:6px;letter-spacing:0}
+.linha-tempo p{color:var(--suave);margin-top:8px;font-size:15.5px}
+.fecho{font:italic 600 clamp(26px,6.6vw,36px)/1.15 var(--f-tit);color:var(--ink);padding-top:26px;border-top:2px solid var(--ink)}
+.fecho small{display:block;font:600 13px/1.4 var(--f-txt);font-style:normal;color:var(--suave);margin-top:10px}
+@media(min-width:900px){.historia .w{grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}.historia .lado{position:sticky;top:110px}}
+
+/* ---------- caminho ---------- */
+.caminho{background:var(--perg)}
+.passos{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:10px;counter-reset:p}
+.passos li{counter-increment:p;display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px;border-radius:var(--r);background:var(--sup);border:1px solid var(--linha)}
+.passos li::before{content:counter(p);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--c1);font:800 16px/1 var(--f-txt);color:var(--ouro-txt)}
+.passos li:last-child{background:var(--ink);border-color:var(--ink)}
+.passos li:last-child h3{color:#fff}.passos li:last-child p{color:#D8CFBE}
+.passos li:last-child::before{background:var(--ouro);color:var(--on-ouro)}
+.passos p{color:var(--suave);margin-top:4px;font-size:14.5px}
+@media(min-width:900px){.passos{grid-template-columns:repeat(4,1fr);gap:14px}.passos li{grid-template-columns:1fr;padding:24px}}
+
+/* ---------- cursos ---------- */
+.carrossel{display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 14px;margin:28px -20px 0;scrollbar-width:none}
+.carrossel::-webkit-scrollbar{display:none}
+.curso{scroll-snap-align:center;border-radius:24px;padding:22px;min-height:250px;display:flex;flex-direction:column}
+.curso:nth-child(1){background:var(--c1)}.curso:nth-child(2){background:var(--c2)}.curso:nth-child(3){background:var(--c3)}.curso:nth-child(4){background:var(--c4)}.curso:nth-child(5){background:var(--c5)}
+.curso svg{width:48px;height:48px;color:var(--ink)}
+.curso h3{font:italic 600 32px/1 var(--f-tit);margin-top:16px;letter-spacing:0}
+.curso>p{color:var(--texto);font-size:14px;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:auto 0 0;padding:18px 0 0}
+.chips li{padding:6px 12px;border-radius:999px;background:rgb(255 255 255/.9);color:var(--ink);font-size:13px;font-weight:600}
+.dica{font-size:12.5px;color:var(--suave);margin-top:4px}
+.nivel{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--suave);font-size:13.5px}
+.nivel span{padding:6px 12px;border-radius:999px;border:1px solid var(--linha);background:var(--sup);color:var(--ink);font-weight:600}
+@media(min-width:900px){.carrossel{grid-auto-flow:row;grid-template-columns:repeat(5,1fr);overflow:visible;margin-inline:0;padding-inline:0}.dica{display:none}}
+
+/* ---------- palco ---------- */
+.palco{background:var(--sup);border-block:1px solid var(--linha)}
+.passa{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 10px;margin:26px -20px 0;scrollbar-width:none}
+.passa::-webkit-scrollbar{display:none}
+.passa figure{margin:0;scroll-snap-align:center;position:relative;border-radius:18px;overflow:hidden;background:var(--perg);aspect-ratio:3/2;transition:transform .5s ease}
+.passa img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .7s ease}
+.passa figure.vivo img,.passa figure:hover img{filter:none}
+.passa figure.vivo{box-shadow:0 0 0 2px var(--ouro)}
+.passa figcaption{position:absolute;left:10px;bottom:10px;padding:6px 12px;border-radius:999px;background:rgb(255 253 248/.94);font:600 12.5px/1 var(--f-txt);color:var(--ink);opacity:0;transition:opacity .5s ease}
+.passa figure.vivo figcaption,.passa figure:hover figcaption{opacity:1}
+.passa-pe{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:10px}
+.pontos{display:flex;gap:6px;flex-wrap:wrap}
+.pontos i{width:8px;height:8px;border-radius:50%;background:var(--linha);transition:background .3s,width .3s}
+.pontos i.on{background:var(--ouro);width:22px;border-radius:99px}
+.setas{display:flex;gap:8px}
+.setas button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--linha);background:var(--fundo);color:var(--ink);font-size:18px;cursor:pointer}
+@media(min-width:900px){.passa{grid-auto-columns:38%;gap:14px;margin-inline:0;padding-inline:0}}
+
+/* ---------- matrícula ---------- */
+.matricula .w{display:grid;gap:16px}
+.caixa{border-radius:24px;padding:24px;background:var(--c1);border:1.5px solid #F1D88C}
+.inclui{list-style:none;margin:20px 0 22px;padding:0}
+.inclui li{position:relative;padding:10px 0 10px 32px;border-bottom:1px dashed var(--linha);font-size:15px}
+.inclui li::before{content:"";position:absolute;left:2px;top:13px;width:18px;height:18px;border-radius:50%;background:var(--ouro)}
+.inclui li::after{content:"";position:absolute;left:7px;top:18px;width:8px;height:4px;border:solid var(--on-ouro);border-width:0 0 2px 2px;rotate:-45deg}
+.caixa .btn{width:100%}
+.ficha{border-radius:24px;padding:24px;background:var(--sup);border:1px solid var(--linha)}
+.ficha h3{font:italic 600 30px/1 var(--f-tit);letter-spacing:0}
+.ficha>p{color:var(--suave);margin-top:6px;font-size:14.5px}
+.campos{display:grid;gap:12px;margin-top:18px}
+.campo{display:grid;gap:5px;min-width:0}
+.campo label{font-size:13px;color:var(--texto);font-weight:600}
+input,select{font:inherit;font-size:16px;color:var(--ink);background:var(--fundo);border:1.5px solid var(--linha);border-radius:12px;padding:13px 14px;width:100%;min-width:0;min-height:50px}
+input:focus,select:focus{outline:none;border-color:var(--ouro)}
+.duas{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.balao{padding:13px 15px;border-radius:16px 16px 16px 4px;background:#E7F8EC;color:#103A20;font-size:14.5px;overflow-wrap:anywhere}
+.balao small{display:block;font:800 10.5px/1 var(--f-txt);letter-spacing:.14em;text-transform:uppercase;color:#2E7D4A;margin-bottom:6px}
+.ficha .btn{width:100%}
+@media(min-width:900px){.matricula .w{grid-template-columns:1fr 1fr;gap:20px;align-items:start}.caixa,.ficha{padding:38px}}
+
+/* ---------- onde + faq ---------- */
+.onde{background:var(--perg)}
+.local{margin-top:26px;border-radius:24px;overflow:hidden;background:var(--sup);border:1px solid var(--linha);box-shadow:0 24px 50px -36px rgb(60 40 0/.6)}
+.mapa{position:relative;aspect-ratio:4/3;background:var(--c2)}
+.mapa-link{position:absolute;inset:0;display:block}
+.mapa-link img{width:100%;height:100%;object-fit:cover}
+.mapa-link span{position:absolute;right:10px;top:10px;padding:8px 13px;border-radius:999px;background:var(--ink);color:#fff;font:600 12.5px/1 var(--f-txt)}
+.fachada{position:absolute;left:16px;bottom:-34px;width:104px;height:104px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px var(--sup),0 0 0 6px var(--ouro),0 12px 24px -8px rgb(0 0 0/.5);z-index:2}
+.cartao{padding:50px 20px 20px;display:grid;gap:16px}
+.cartao div{display:grid;gap:3px}
+.cartao small{font:800 10.5px/1 var(--f-txt);letter-spacing:.18em;text-transform:uppercase;color:var(--ouro-txt)}
+.cartao b{font-size:16px;color:var(--ink);font-weight:600}
+.cartao .duo{grid-template-columns:1fr 1fr;gap:12px}
+.cartao .duo b{font-size:15px;white-space:nowrap}
+.cartao a{overflow-wrap:anywhere}
+.links{grid-template-columns:1fr 1fr;gap:8px!important}
+.faq details{border-bottom:1px solid var(--linha);padding:17px 0}
+.faq .lista{margin-top:24px;border-top:1px solid var(--linha)}
+.faq summary{cursor:pointer;list-style:none;font:600 16.5px/1.35 var(--f-txt);color:var(--ink);display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--c1);color:var(--ouro-txt);font-weight:800}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--suave);margin-top:8px;font-size:15px}
+@media(min-width:900px){.onde .w,.faq .w{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}.local,.faq .lista{margin-top:0}.mapa{aspect-ratio:16/9}.fachada{width:132px;height:132px;bottom:-44px}.cartao{padding:64px 28px 28px}}
+
+/* ---------- final e rodapé ---------- */
+.final{text-align:center}
+.final h2{max-width:13em;margin:0 auto 26px}
+.final .btn{width:min(100%,360px)}
+.rodape{background:var(--ink);color:#BDB3A0;padding-block:40px 44px;font-size:14px}
+.rodape .w{display:grid;gap:22px}
+.rodape b{display:block;color:#fff;font-weight:600;margin-bottom:4px}
+.rodape a{color:#FFE3A1}
+@media(min-width:900px){.rodape .w{grid-template-columns:1.4fr 1fr 1fr 1fr}section{padding-block:104px}.w{padding-inline:40px}}
+
+/* ---------- whatsapp sempre à vista ---------- */
+.bola{position:fixed;right:14px;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:25;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--zap);color:#fff;box-shadow:0 10px 26px -6px rgb(0 0 0/.45)}
+.bola::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--zap);opacity:0;animation:pulso 2.4s ease-out infinite}
+.barra{position:fixed;inset:auto 0 0;z-index:24;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgb(255 253 248/.97);border-top:1px solid var(--linha)}
+.barra .btn{width:100%;min-height:54px}
+#site{padding-bottom:76px}
+@media(min-width:900px){.barra{display:none}#site{padding-bottom:0}.bola{bottom:28px;right:28px;width:66px;height:66px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="piano" viewBox="0 0 120 95"><path fill="currentColor" fill-rule="evenodd" d="M120.0 41.5 119.0 40.5 118.3 40.7 115.0 43.9 112.3 46.0 109.2 47.8 106.3 48.7 103.8 49.2 99.9 49.2 95.4 47.8 93.6 46.5 91.4 43.8 90.3 41.2 89.9 35.4 91.3 26.0 91.4 20.6 91.2 18.0 89.8 13.1 85.7 7.8 83.7 6.0 80.0 3.5 77.8 1.6 74.7 0.6 71.9 0.1 63.4 0.1 58.3 1.1 52.6 3.1 47.5 5.8 43.0 9.0 36.4 15.0 6.1 49.7 2.0 55.0 0.5 58.4 0.0 61.1 0.0 94.4 0.5 94.8 6.2 93.6 7.0 92.9 7.2 92.1 7.2 68.0 7.6 67.5 14.2 67.4 14.8 68.0 14.8 91.5 15.0 91.8 19.5 90.9 20.3 90.2 20.3 68.0 21.0 67.3 27.5 67.2 28.1 67.8 28.1 89.0 28.6 89.5 33.7 89.2 34.7 87.9 34.7 67.6 35.4 67.0 42.5 67.0 43.0 67.5 43.0 87.5 43.5 88.0 48.7 87.8 49.6 86.7 49.5 67.5 50.2 66.8 57.9 66.8 58.6 67.3 58.8 86.4 59.2 86.8 61.2 86.9 61.6 86.5 61.6 67.3 62.3 66.7 69.8 66.7 70.5 67.8 70.1 71.6 70.0 84.4 70.3 86.9 70.9 87.4 77.2 87.4 78.0 86.9 78.3 85.8 78.3 68.6 78.0 67.0 78.7 66.4 87.2 66.4 87.7 66.9 87.7 69.6 87.9 70.3 87.7 73.4 87.7 85.2 87.9 86.5 88.7 87.3 94.4 87.3 94.8 86.9 95.0 85.3 95.0 66.9 95.5 66.4 103.2 66.3 103.7 66.8 104.0 67.9 103.8 86.1 104.3 86.7 106.4 86.7 106.8 86.3 106.9 66.9 107.7 66.2 115.5 66.2 116.3 66.9 116.4 85.9 117.1 86.5 119.6 86.7 120.0 86.3Z"/></symbol>
+  <symbol id="zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></symbol>
+</defs></svg>
+
+<div id="site">
+<header class="topo" id="topo">
+  <div class="w">
+    <a class="logo" href="#inicio" aria-label="Conservatório Musical Schumann, início">
+      <svg viewBox="0 0 120 95" aria-hidden="true"><use href="#piano"/></svg>
+      <span><small>Conservatório Musical</small><b>SCHUMANN</b></span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#show" data-so-show>O show</a><a href="#historia">Nossa história</a><a href="#cursos">Cursos</a><a href="#palco">O palco</a><a href="#matricula">Matrícula</a>
+    </nav>
+    <a class="btn peq" id="topo-btn" href="#show">Ingressos</a>
+  </div>
+</header>
+
+<main>
+<section class="abertura" id="inicio" aria-label="Abertura">
+  <div class="telas" aria-hidden="true">
+    <video class="t1" id="v-topo" poster="img/abertura-celular.webp" data-src="vid/abertura-celular.mp4" data-src-largo="vid/abertura-largo.mp4" data-poster-largo="img/abertura-largo.webp" muted loop playsinline preload="none"></video>
+  </div>
+  <div class="veu"></div>
+  <div class="abre">
+    <div class="chamada" data-so-show>
+      <span class="carimbo">1º lote esgotado</span>
+      <p class="ch-tit">Show dos 30 anos <b>29 de outubro</b></p>
+      <div class="crono" id="crono" role="timer" aria-label="Tempo que falta para o show">
+        <div><b id="c-d">00</b><small>dias</small></div><div><b id="c-h">00</b><small>horas</small></div><div><b id="c-m">00</b><small>min</small></div><div><b id="c-s">00</b><small>seg</small></div>
+      </div>
+      <p class="ch-preco" data-promo><s>R$ 100</s> <b>R$ 50</b> <span>até 20 de outubro</span></p>
+      <p class="ch-preco" data-cheio hidden>Ingresso <b>R$ 100</b></p>
+      <span class="faisca"><a class="btn zap" href="#show"><svg width="26" height="26" aria-hidden="true"><use href="#zap"/></svg>Comprar ingresso</a></span>
+    </div>
+    <div class="selo" aria-hidden="true">
+      <svg class="anel" viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-73.5,0 a73.5,73.5 0 1,1 147,0 a73.5,73.5 0 1,1 -147,0"/></defs><text><textPath href="#circ" textLength="455" lengthAdjust="spacing">Tradição ✦ Ensino ✦ Arte ✦ Disciplina ✦ Desenvolvimento ✦ Conquistas ✦ Futuro ✦</textPath></text></svg>
+      <div class="foco"><b>30</b><i>anos</i></div>
+    </div>
+    <h1 class="marca"><svg viewBox="0 0 120 95" aria-hidden="true"><use href="#piano"/></svg><span><small>Conservatório Musical</small><b>SCHUMANN</b></span></h1>
+    <p class="lema">Em Ilhéus, música é <b id="palavra">tradição</b>.</p>
+    <div class="acoes">
+      <a class="btn vidro" href="https://wa.me/5573991330116?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Conservat%C3%B3rio%20Schumann%20e%20quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">Agendar aula experimental</a>
+    </div>
+  </div>
+  <span class="desce" aria-hidden="true"></span>
+</section>
+
+<section class="show" id="show" data-so-show>
+  <div class="w">
+    <a class="cartaz" id="cartaz" href="#" target="_blank" rel="noopener" aria-label="Comprar ingresso pelo WhatsApp">
+      <img src="img/show-trilha-sonora.webp" alt="Cartaz do show A Trilha Sonora de uma Geração: Conservatório Musical Schumann, 30 anos em Ilhéus. Centro de Convenções, quinta-feira, 29 de outubro, às 19 horas. Valor integral R$ 100,00; segundo lote R$ 50,00 até 20 de outubro. WhatsApp (73) 99133-0116." width="900" height="1350">
+      <em class="esgotado">1º lote<br>esgotado</em>
+      <span><svg width="22" height="22" aria-hidden="true"><use href="#zap"/></svg>Compre aqui · toque no cartaz</span>
+    </a>
+    <div>
+      <p class="rot">O show dos 30 anos</p>
+      <h2>A Trilha Sonora <b>de uma Geração</b></h2>
+      <p class="sub" style="color:var(--on-vinho)">Um show de música instrumental e vocal, com professores, alunos e músicos formados pela casa.</p>
+      <span class="falta">1º lote esgotado</span> <span class="falta claro" data-promo>R$ 50 só até 20 de outubro</span>
+      <ul class="dados">
+        <li><small>Data</small><b>Quinta-feira, 29 de outubro</b></li>
+        <li><small>Horário</small><b>19 horas, pontualmente</b></li>
+        <li><small>Local</small><b>Centro de Convenções de Ilhéus</b></li>
+        <li><small>Ingresso</small><b data-promo><s>R$ 100,00</s> R$ 50,00 até 20 de outubro</b><b data-cheio hidden>R$ 100,00</b></li>
+      </ul>
+      <div class="compra">
+        <div class="bilhete" data-promo>
+          <div class="cheio"><small>Valor integral</small><s>R$ 100,00</s></div>
+          <div class="lote"><small>Segundo lote <i>(até 20 de outubro)</i></small><b>R$ 50,00</b><em>(meia entrada)</em></div>
+        </div>
+        <div class="bilhete um" data-cheio hidden><div class="lote"><small>Ingresso</small><b>R$ 100,00</b></div></div>
+        <div class="compra-top">
+          <div><small>Total</small><b id="total">R$ 50,00</b></div>
+          <div class="qtd"><button type="button" id="menos" aria-label="Menos um ingresso">−</button><output id="qtd" aria-live="polite">1</output><button type="button" id="mais" aria-label="Mais um ingresso">+</button></div>
+        </div>
+        <span class="faisca"><a class="btn zap" id="comprar" href="#" target="_blank" rel="noopener"><svg width="28" height="28" aria-hidden="true"><use href="#zap"/></svg>Comprar pelo WhatsApp</a></span>
+        <p>Você fala direto com a escola: <span class="sel">(73) 99133-0116</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="valores" aria-label="Nossos valores">
+  <div class="trilho">
+    <ul><li>Tradição</li><li>Ensino</li><li>Arte</li><li>Disciplina</li><li>Desenvolvimento</li><li>Conquistas</li><li>Futuro</li></ul>
+    <ul aria-hidden="true"><li>Tradição</li><li>Ensino</li><li>Arte</li><li>Disciplina</li><li>Desenvolvimento</li><li>Conquistas</li><li>Futuro</li></ul>
+  </div>
+</div>
+
+<section class="historia" id="historia">
+  <div class="w">
+    <div class="lado">
+      <p class="rot">Nossa história</p>
+      <h2>Tudo começou numa sala alugada, <b>em fevereiro de 1996.</b></h2>
+      <p class="sub">Duas professoras, uma sala e a vontade de ensinar música em Ilhéus. Trinta anos e quatro endereços depois, a escola tem casa própria no Centro.</p>
+      <div class="marca-30" style="margin-top:24px"><img src="img/banner-30anos.webp" alt="Logomarca dourada do Conservatório Musical Schumann, 30 anos" width="1200" height="400" loading="lazy" decoding="async"></div>
+    </div>
+    <div>
+      <ol class="linha-tempo">
+        <li><span class="ano">Fevereiro de 1996</span><h3>A primeira sala</h3><p>As professoras Rute Assis e Normélia abrem a escola numa sala alugada na Rua Prado Valadares. No mesmo ano, ela se muda para o Edifício Misael Tavares, na Praça Coronel Pessoa. O nome, no começo, era Conservatório de Música Schubert.</p></li>
+        <li><span class="ano">1997</span><h3>Praça J.J. Seabra</h3><p>A escola vai para o Edifício Virgílio Amorim, na Travessa 1º de Janeiro. A professora Normélia deixa a sociedade e a professora Marinalva Melo entra como sócia por mais um ano. Depois, segue como parceira da casa.</p></li>
+        <li><span class="ano">Em seguida</span><h3>Nasce o Schumann</h3><p>Sob a liderança da professora Rute Assis, a escola adota de vez o nome Conservatório Musical Schumann, a marca que acompanha gerações de alunos em Ilhéus.</p></li>
+        <li><span class="ano">2019</span><h3>A sede própria</h3><p>O conservatório realiza o sonho do espaço definitivo e se muda para a Rua Carneiro da Rocha, 108, no Centro. É onde a música acontece até hoje.</p></li>
+        <li class="hoje"><span class="ano">2026</span><h3>30 anos no palco</h3><p>Professores, alunos e músicos formados na casa sobem juntos ao palco do Centro de Convenções em A Trilha Sonora de uma Geração.</p></li>
+      </ol>
+      <p class="fecho" style="margin-top:30px">Um lugar para estudar, sonhar e realizar.<small>Estude música com quem só faz música.</small></p>
+    </div>
+  </div>
+</section>
+
+<section class="caminho" id="caminho">
+  <div class="w">
+    <p class="rot">Do primeiro dia ao palco</p>
+    <h2>Seu filho não faz só aula. <b>Ele tem um caminho.</b></h2>
+    <ol class="passos">
+      <li><div><h3>Aula experimental</h3><p>Conhece a escola, experimenta o instrumento e a gente indica o melhor curso para a idade.</p></div></li>
+      <li><div><h3>Instrumento e teoria</h3><p>Aula de instrumento com teoria musical junto, para ler a partitura e entender o que toca.</p></div></li>
+      <li><div><h3>Ensaio com a turma</h3><p>Toca com outros alunos, aprende a ouvir o grupo e se prepara para a apresentação.</p></div></li>
+      <li><div><h3>O palco</h3><p>Apresentação com banda, coral e público. A família assiste da plateia.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="cursos">
+  <div class="w">
+    <p class="rot">Cursos</p>
+    <h2>Escolha o seu <b>instrumento.</b></h2>
+    <div class="carrossel">
+      <article class="curso"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 44V14l26-6v30"/><circle cx="16" cy="44" r="6"/><circle cx="42" cy="38" r="6"/><path d="M22 22l26-6"/></svg><h3>Para começar</h3><p>A base para quem está chegando, inclusive os pequenos.</p><ul class="chips"><li>Musicalização infantil</li><li>Teoria musical</li></ul></article>
+      <article class="curso"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="18" width="52" height="30" rx="3"/><path d="M15 18v30M24 18v30M33 18v30M42 18v30M51 18v30"/><path d="M12 18v16h6V18M30 18v16h6V18M39 18v16h6V18" fill="currentColor"/></svg><h3>Teclas</h3><p>Do primeiro dó à peça inteira.</p><ul class="chips"><li>Piano</li><li>Teclado</li></ul></article>
+      <article class="curso"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M40 8l8 8-14 14"/><path d="M34 30c4 6 2 14-4 18s-16 6-20 2-2-14 2-20 12-8 18-4"/><circle cx="23" cy="41" r="4"/><path d="M44 6l6 6"/></svg><h3>Cordas</h3><p>Do violão ao violino.</p><ul class="chips"><li>Violão</li><li>Guitarra</li><li>Contrabaixo</li><li>Violino</li></ul></article>
+      <article class="curso"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M38 6h8v6"/><path d="M42 12v24c0 10-6 18-15 18s-13-6-13-12c0-5 4-7 8-7"/><circle cx="34" cy="24" r="1.6" fill="currentColor"/><circle cx="34" cy="31" r="1.6" fill="currentColor"/><circle cx="34" cy="38" r="1.6" fill="currentColor"/></svg><h3>Sopros</h3><p>Saxofone e flautas.</p><ul class="chips"><li>Saxofone</li><li>Flauta doce</li><li>Flauta transversal</li></ul></article>
+      <article class="curso"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="22" y="6" width="20" height="32" rx="10"/><path d="M14 30c0 10 8 18 18 18s18-8 18-18M32 48v10M22 58h20"/></svg><h3>Voz</h3><p>Cantar com técnica e confiança.</p><ul class="chips"><li>Técnica vocal</li></ul></article>
+    </div>
+    <p class="dica">Arraste para o lado para ver todos.</p>
+    <div class="nivel"><span>Iniciante</span><span>Intermediário</span><span>Avançado</span> Horários sob consulta.</div>
+  </div>
+</section>
+
+<section class="palco" id="palco">
+  <div class="w">
+    <p class="rot">O palco</p>
+    <h2>A aula termina <b>com aplauso.</b></h2>
+    <p class="sub">É no palco que o aluno vê o quanto andou, e a família vê de perto.</p>
+    <div class="passa" id="passa" tabindex="0" aria-label="Fotos das apresentações">
+      <figure><img src="img/g-grupo-amarelo.webp" alt="Alunos e professores do Schumann reunidos no palco, de camiseta amarela" width="900" height="600" loading="lazy" decoding="async"><figcaption>A turma inteira</figcaption></figure>
+      <figure><img src="img/g-criancas-natal.webp" alt="Crianças cantando com gorro de Natal" width="900" height="571" loading="lazy" decoding="async"><figcaption>Coral infantil</figcaption></figure>
+      <figure><img src="img/g-confete.webp" alt="Chuva de papel picado no fim da apresentação" width="900" height="571" loading="lazy" decoding="async"><figcaption>O final</figcaption></figure>
+      <figure><img src="img/g-sax-fumaca.webp" alt="Saxofonista tocando no palco" width="900" height="571" loading="lazy" decoding="async"><figcaption>Saxofone</figcaption></figure>
+      <figure><img src="img/g-dupla-teclado.webp" alt="Dois alunos tocando teclado juntos" width="900" height="600" loading="lazy" decoding="async"><figcaption>Teclado a quatro mãos</figcaption></figure>
+      <figure><img src="img/g-plateia.webp" alt="Plateia assistindo à apresentação" width="900" height="571" loading="lazy" decoding="async"><figcaption>A família na plateia</figcaption></figure>
+      <figure><img src="img/g-criancas-instrumentos.webp" alt="Crianças no palco com instrumentos" width="900" height="600" loading="lazy" decoding="async"><figcaption>Os pequenos</figcaption></figure>
+      <figure><img src="img/g-regente-criancas.webp" alt="Professora regendo as crianças" width="900" height="571" loading="lazy" decoding="async"><figcaption>Regência</figcaption></figure>
+      <figure><img src="img/g-palco-cheio.webp" alt="Palco cheio de alunos na apresentação" width="900" height="600" loading="lazy" decoding="async"><figcaption>Palco cheio</figcaption></figure>
+      <figure><img src="img/g-maos-piano.webp" alt="Mãos ao piano" width="900" height="571" loading="lazy" decoding="async"><figcaption>Piano</figcaption></figure>
+    </div>
+    <div class="passa-pe"><div class="pontos" id="pontos" aria-hidden="true"></div><div class="setas"><button type="button" id="p-ant" aria-label="Foto anterior">&#8592;</button><button type="button" id="p-prox" aria-label="Próxima foto">&#8594;</button></div></div>
+  </div>
+</section>
+
+<section class="matricula" id="matricula">
+  <div class="w">
+    <div class="caixa">
+      <p class="rot">Matrícula aberta</p>
+      <h2>Do primeiro dia <b>ao palco.</b></h2>
+      <ul class="inclui">
+        <li>Aula experimental para conhecer a escola</li>
+        <li>Instrumento ou canto, do iniciante ao avançado</li>
+        <li>Dia e horário combinados com você</li>
+        <li>Teoria musical junto com o instrumento</li>
+        <li>Ensaio com a turma e apresentação da escola</li>
+      </ul>
+      <a class="btn" href="https://wa.me/5573991330116?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Conservat%C3%B3rio%20Schumann%20e%20quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">Agendar aula experimental</a>
+      <p class="micro">Valores e horários pelo WhatsApp.</p>
+    </div>
+    <form class="ficha" id="ficha" novalidate>
+      <h3>Ficha de interesse</h3>
+      <p>Preencha e a mensagem sai pronta para o WhatsApp da escola.</p>
+      <div class="campos">
+        <div class="campo"><label for="f-nome">Seu nome</label><input id="f-nome" autocomplete="name"></div>
+        <div class="duas">
+          <div class="campo"><label for="f-idade">Idade do aluno</label><input id="f-idade" inputmode="numeric" placeholder="ex.: 8"></div>
+          <div class="campo"><label for="f-turno">Melhor horário</label><select id="f-turno"><option value="à tarde">Tarde</option><option value="de manhã">Manhã</option><option value="à noite">Noite</option><option value="no sábado">Sábado</option></select></div>
+        </div>
+        <div class="campo"><label for="f-curso">Curso de interesse</label>
+          <select id="f-curso"><option>Ainda não sei</option><option>Musicalização infantil</option><option>Piano</option><option>Teclado</option><option>Violão</option><option>Guitarra</option><option>Contrabaixo</option><option>Violino</option><option>Saxofone</option><option>Flauta doce</option><option>Flauta transversal</option><option>Técnica vocal</option><option>Teoria musical</option></select>
+        </div>
+        <div class="balao"><small>Sua mensagem</small><span id="f-texto"></span></div>
+        <a class="btn zap" id="f-enviar" href="#" target="_blank" rel="noopener"><svg width="24" height="24" aria-hidden="true"><use href="#zap"/></svg>Enviar pelo WhatsApp</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="w">
+    <div>
+      <p class="rot">Como chegar</p>
+      <h2>No Centro <b>de Ilhéus.</b></h2>
+      <p class="sub">A sede própria do conservatório fica na Rua Carneiro da Rocha, 108.</p>
+    </div>
+    <div class="local">
+      <div class="mapa">
+        <a class="mapa-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Carneiro%20da%20Rocha%2C%20108%2C%20Ilh%C3%A9us%20BA" target="_blank" rel="noopener" aria-label="Abrir a localização no Google Maps"><img src="img/mapa-centro.svg" alt="Mapa do Centro de Ilhéus com a Rua Carneiro da Rocha em destaque, entre a Praça Cairu e a Avenida Itabuna" width="800" height="560" loading="lazy" decoding="async"><span>Abrir no Google Maps</span></a>
+        <img class="fachada" src="img/fachada.webp" alt="Fachada do Conservatório Musical Schumann, preta com letras douradas" width="360" height="360" loading="lazy" decoding="async">
+      </div>
+      <div class="cartao">
+        <div><small>Endereço</small><b>Rua Carneiro da Rocha, 108 · Centro · Ilhéus-BA</b></div>
+        <div class="duo"><div><small>WhatsApp</small><b class="sel">(73) 99133-0116</b></div><div><small>Telefone fixo</small><b class="sel">(73) 3231-6641</b></div></div>
+        <div><small>Instagram</small><b><a href="https://www.instagram.com/conservatoriomusicalschumann/" target="_blank" rel="noopener">@conservatoriomusicalschumann</a></b></div>
+        <div class="links"><a class="btn peq" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20Carneiro%20da%20Rocha%2C%20108%2C%20Ilh%C3%A9us%20BA" target="_blank" rel="noopener">Traçar rota</a><a class="btn sec peq" href="https://waze.com/ul?q=Rua%20Carneiro%20da%20Rocha%20108%20Ilh%C3%A9us" target="_blank" rel="noopener">Abrir no Waze</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="w">
+    <div><p class="rot">Dúvidas</p><h2>Perguntas <b>frequentes</b></h2></div>
+    <div class="lista">
+      <details data-so-show open><summary>Como compro o ingresso do show?</summary><p>Pelo WhatsApp (73) 99133-0116. Diga quantos ingressos quer e a escola combina o pagamento e a entrega. O 1º lote esgotou. No 2º lote, o ingresso de R$ 100,00 sai por R$ 50,00 até 20 de outubro.</p></details>
+      <details><summary>Meu filho nunca tocou. Ele pode começar?</summary><p>Pode. O curso começa do primeiro dia, com instrumento e teoria juntos, no ritmo dele.</p></details>
+      <details><summary>Com que idade dá para começar?</summary><p>Os pequenos começam na musicalização infantil. Na aula experimental a gente indica o curso certo para a idade.</p></details>
+      <details><summary>Adulto que nunca tocou pode aprender?</summary><p>Pode. Os cursos são para crianças, jovens e adultos, do iniciante ao avançado.</p></details>
+      <details><summary>Quais são os horários e os valores?</summary><p>Dependem do curso e são combinados na matrícula. Chame no WhatsApp que a secretaria passa tudo.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="w">
+    <h2>A próxima apresentação pode ter <b>o seu filho no palco.</b></h2>
+    <a class="btn" href="https://wa.me/5573991330116?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Conservat%C3%B3rio%20Schumann%20e%20quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">Agendar aula experimental</a>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="w">
+    <div><a class="logo" href="#inicio"><svg viewBox="0 0 120 95" aria-hidden="true"><use href="#piano"/></svg><span><small>Conservatório Musical</small><b>SCHUMANN</b></span></a><p style="margin-top:12px">30 anos em Ilhéus. Estude música com quem só faz música.</p></div>
+    <div><b>Endereço</b>Rua Carneiro da Rocha, 108 · Centro · Ilhéus-BA</div>
+    <div><b>Contato</b><span class="sel">(73) 99133-0116</span> WhatsApp<br><span class="sel">(73) 3231-6641</span> fixo</div>
+    <div><b>Instagram</b><a href="https://www.instagram.com/conservatoriomusicalschumann/" target="_blank" rel="noopener">@conservatoriomusicalschumann</a></div>
+  </div>
+</footer>
+
+<a class="bola" id="bola" href="https://wa.me/5573991330116?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Conservat%C3%B3rio%20Schumann." target="_blank" rel="noopener" aria-label="Falar no WhatsApp (73) 99133-0116"><svg width="32" height="32" aria-hidden="true"><use href="#zap"/></svg></a>
+<div class="barra"><a class="btn zap" id="barra-btn" href="#" target="_blank" rel="noopener"><svg width="24" height="24" aria-hidden="true"><use href="#zap"/></svg><span id="barra-txt">Comprar ingresso · R$ 50</span></a></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var WA="https://wa.me/5573991330116?text=";
+var AULA=WA+encodeURIComponent("Olá! Vi o site do Conservatório Schumann e quero agendar uma aula experimental.");
+function $(s){return document.querySelector(s)}
+function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+function reais(v){return "R$ "+v.toFixed(2).replace(".",",")}
+
+/* topo */
+var topo=$("#topo");function rola(){topo.classList.toggle("cheio",window.scrollY>30)}
+window.addEventListener("scroll",rola,{passive:true});rola();
+
+/* show: preço por lote, cronômetro, quantidade e mensagem pronta.
+   Para mudar a data do preço promocional, troque PROMO_FIM (o dia seguinte ao último dia de R$ 50). */
+var DIA=new Date("2026-10-29T19:00:00-03:00"),FIM=new Date("2026-10-30T00:00:00-03:00"),PROMO_FIM=new Date("2026-10-21T00:00:00-03:00");
+var agora=new Date(),showAtivo=agora<FIM,promo=agora<PROMO_FIM,PRECO=promo?50:100,q=1;
+$$("[data-promo]").forEach(function(e){e.hidden=!promo});$$("[data-cheio]").forEach(function(e){e.hidden=promo});
+function atualizaShow(){
+  $("#qtd").textContent=q;$("#total").textContent=reais(PRECO*q);
+  var msg="Olá! Quero comprar "+q+" ingresso"+(q>1?"s":"")+" para o show A Trilha Sonora de uma Geração (29/10, às 19h, no Centro de Convenções). Total: "+reais(PRECO*q)+". Como faço o pagamento?";
+  var link=WA+encodeURIComponent(msg);
+  $("#comprar").href=link;$("#cartaz").href=link;if(showAtivo)$("#barra-btn").href=link;
+}
+$("#menos").onclick=function(){if(q>1){q--;atualizaShow()}};
+$("#mais").onclick=function(){if(q<20){q++;atualizaShow()}};
+function dois(n){return String(n).padStart(2,"0")}
+function tique(){
+  var r=Math.max(0,DIA-new Date()),s=Math.floor(r/1000);
+  $("#c-d").textContent=dois(Math.floor(s/86400));$("#c-h").textContent=dois(Math.floor(s%86400/3600));$("#c-m").textContent=dois(Math.floor(s%3600/60));$("#c-s").textContent=dois(s%60);
+}
+if(showAtivo){
+  tique();setInterval(tique,1000);
+  $("#barra-txt").textContent=promo?"Ingresso de R$ 100 por R$ 50":"Comprar ingresso · R$ 100";
+}else{
+  $$("[data-so-show]").forEach(function(e){e.hidden=true});
+  var tb=$("#topo-btn");tb.textContent="Agendar aula";tb.href=AULA;tb.target="_blank";tb.rel="noopener";
+  $("#barra-btn").href=AULA;$("#barra-txt").textContent="Agendar aula experimental";
+}
+atualizaShow();
+
+/* palavra que troca */
+var PAL=["tradição","ensino","arte","disciplina","desenvolvimento","conquista","futuro"],pi=0,pel=$("#palavra");
+var calmo=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!calmo)setInterval(function(){pel.classList.add("sai");setTimeout(function(){pi=(pi+1)%PAL.length;pel.textContent=PAL[pi];pel.classList.remove("sai")},400)},2400);
+
+/* vídeos: só carregam depois da página, e nunca com economia de dados ligada */
+var vt=$("#v-topo");if(window.matchMedia("(min-width:900px)").matches){vt.poster=vt.dataset.posterLargo;vt.dataset.src=vt.dataset.srcLargo}
+var poupa=(navigator.connection&&navigator.connection.saveData)||calmo;
+function toca(v){v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){})}
+function liga(v){if(v.dataset.src&&!v.getAttribute("src")){v.muted=true;v.defaultMuted=true;v.autoplay=true;v.addEventListener("canplay",function(){toca(v)});v.src=v.dataset.src;v.load();toca(v)}}
+function comecaVideos(){
+  if(poupa)return;
+  liga($("#v-topo"));
+  document.addEventListener("visibilitychange",function(){if(!document.hidden)$$(".telas video").forEach(function(v){if(v.getAttribute("src")&&v.paused)toca(v)})});
+  var r=$$("video[data-rolar]");
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){liga(e.target);io.unobserve(e.target)}})},{rootMargin:"200px"});r.forEach(function(v){io.observe(v)})}
+}
+if(document.readyState==="complete")setTimeout(comecaVideos,300);else window.addEventListener("load",function(){setTimeout(comecaVideos,300)});
+
+/* fotos que passam sozinhas: preto e branco, a do centro ganha cor */
+var pas=$("#passa"),figs=$$("#passa figure"),pts=$("#pontos"),pa=0,mexeu=0;
+figs.forEach(function(){pts.appendChild(document.createElement("i"))});
+function centro(){var c=pas.scrollLeft+pas.clientWidth/2,b=0,d=1e9;figs.forEach(function(f,i){var x=Math.abs(f.offsetLeft-pas.offsetLeft+f.offsetWidth/2-c);if(x<d){d=x;b=i}});return b}
+function pinta(){pa=centro();figs.forEach(function(f,i){f.classList.toggle("vivo",i===pa)});Array.prototype.forEach.call(pts.children,function(p,i){p.classList.toggle("on",i===pa)})}
+function irPara(i){i=(i+figs.length)%figs.length;var f=figs[i];pas.scrollTo({left:f.offsetLeft-pas.offsetLeft-(pas.clientWidth-f.offsetWidth)/2,behavior:calmo?"auto":"smooth"})}
+pas.addEventListener("scroll",function(){clearTimeout(pinta._t);pinta._t=setTimeout(pinta,70)},{passive:true});
+["touchstart","pointerdown","keydown","wheel"].forEach(function(ev){pas.addEventListener(ev,function(){mexeu=Date.now()},{passive:true})});
+$("#p-ant").onclick=function(){mexeu=Date.now();irPara(pa-1)};$("#p-prox").onclick=function(){mexeu=Date.now();irPara(pa+1)};
+pinta();
+var naTela=false;if("IntersectionObserver" in window){new IntersectionObserver(function(e){naTela=e[0].isIntersecting},{threshold:.3}).observe(pas)}else naTela=true;
+if(!calmo)setInterval(function(){if(naTela&&Date.now()-mexeu>6000&&!document.hidden)irPara(pa+1)},3200);
+
+/* ficha de interesse com a mensagem pronta */
+function ficha(){
+  var nome=$("#f-nome").value.trim(),idade=$("#f-idade").value.trim(),curso=$("#f-curso").value,t=$("#f-turno").value;
+  var m="Olá! "+(nome?"Sou "+nome+". ":"")+"Quero saber da aula experimental"+(curso!=="Ainda não sei"?" de "+curso:"")+(idade?" para um aluno de "+idade+" anos":"")+". O melhor horário é "+t+".";
+  $("#f-texto").textContent=m;$("#f-enviar").href=WA+encodeURIComponent(m);
+}
+$$("#ficha input,#ficha select").forEach(function(el){el.addEventListener("input",ficha);el.addEventListener("change",ficha)});
+$("#ficha").addEventListener("submit",function(e){e.preventDefault()});
+ficha();
+})();
+</script>
+
+</body>
+</html>
