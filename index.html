@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Conservatório Musical Schumann · 30 anos em Ilhéus">
-<meta property="og:description" content="Show A Trilha Sonora de uma Geração · 29 de outubro, 19h · Centro de Convenções de Ilhéus · Ingresso R$ 50 pelo WhatsApp.">
+<meta property="og:description" content="Show A Trilha Sonora de uma Geração · 29 de outubro, 19h · Centro de Convenções de Ilhéus · Ingresso R$ 50 + 1 kg de alimento, pelo WhatsApp.">
 <meta property="og:url" content="https://conservatorioschumann.netlify.app/">
 <meta property="og:image" content="https://conservatorioschumann.netlify.app/img/show-trilha-sonora.jpg">
 <meta property="og:image:width" content="800">
@@ -144,6 +144,15 @@ section{padding-block:60px}
 .dados small{font:800 10.5px/1 var(--f-txt);letter-spacing:.18em;text-transform:uppercase;color:#FFC93C}
 .dados b{font:600 15.5px/1.3 var(--f-txt);color:#fff}
 .compra{margin-top:22px;border-radius:22px;background:var(--fundo);color:var(--texto);padding:20px;display:grid;gap:16px}
+.ico-al{width:22px;height:22px;flex:none}
+.alimento{display:flex;align-items:center;gap:10px;width:100%;margin:-4px 0 0;padding:10px 14px;border-radius:14px;background:#1F7A3E;color:#fff;font:600 14px/1.25 var(--f-txt);text-align:left;box-shadow:inset 0 0 0 1.5px #7FE0A0}
+.alimento b{color:#FFE9A8;font-weight:800;font-size:15.5px}
+.bilhete em.kg{display:inline-flex;align-items:center;justify-content:center;gap:6px;margin-top:4px;padding:5px 10px;border-radius:999px;background:#1F7A3E;color:#fff;font:800 11.5px/1 var(--f-txt);letter-spacing:0;text-transform:none;white-space:nowrap}
+.bilhete em.kg .ico-al{width:16px;height:16px}
+.solidario{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;background:#E9F7EE;color:#14532D;border:1.5px solid #7FD19B}
+.solidario .ico-al{width:30px;height:30px;color:#1F7A3E}
+.solidario p{font-size:14px;line-height:1.4;text-align:left}
+.solidario b{display:block;font-size:15.5px;font-weight:800;color:#14532D;margin-bottom:2px}
 .bilhete{display:grid;grid-template-columns:.8fr 1.2fr;background:#0E0B07;border-radius:14px;color:#fff;position:relative;box-shadow:inset 0 0 0 2px var(--ouro),0 0 18px rgb(227 169 11/.45);text-align:center}
 .bilhete.um{grid-template-columns:1fr}
 .bilhete>div{padding:14px 8px 12px;display:grid;align-content:center;gap:4px}
@@ -341,6 +350,7 @@ input:focus,select:focus{outline:none;border-color:var(--ouro)}
         <div><b id="c-d">00</b><small>dias</small></div><div><b id="c-h">00</b><small>horas</small></div><div><b id="c-m">00</b><small>min</small></div><div><b id="c-s">00</b><small>seg</small></div>
       </div>
       <p class="ch-preco" data-promo><s>R$ 100</s> <b>R$ 50</b> <span>até 20 de outubro</span></p>
+      <p class="alimento" data-promo><svg class="ico-al" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 7V6a5 5 0 0 1 10 0v1h2.2a1 1 0 0 1 1 .9l1.3 12A2 2 0 0 1 19.5 22h-15a2 2 0 0 1-2-2.1l1.3-12a1 1 0 0 1 1-.9zm2 0h6V6a3 3 0 0 0-6 0zm3 4.2c-1.3-1.5-4-1.1-4 1.2 0 2 2.5 3.6 4 4.6 1.5-1 4-2.6 4-4.6 0-2.3-2.7-2.7-4-1.2z"/></svg><span><b>+ 1 kg de alimento</b> doado ao trabalho social</span></p>
       <p class="ch-preco" data-cheio hidden>Ingresso <b>R$ 100</b></p>
       <span class="faisca"><a class="btn zap" href="#show"><svg width="26" height="26" aria-hidden="true"><use href="#zap"/></svg>Comprar ingresso</a></span>
     </div>
@@ -360,7 +370,7 @@ input:focus,select:focus{outline:none;border-color:var(--ouro)}
 <section class="show" id="show" data-so-show>
   <div class="w">
     <a class="cartaz" id="cartaz" href="#" target="_blank" rel="noopener" aria-label="Comprar ingresso pelo WhatsApp">
-      <img src="img/show-trilha-sonora.webp" alt="Cartaz do show A Trilha Sonora de uma Geração: Conservatório Musical Schumann, 30 anos em Ilhéus. Centro de Convenções, quinta-feira, 29 de outubro, às 19 horas. Valor integral R$ 100,00; segundo lote R$ 50,00 até 20 de outubro. WhatsApp (73) 99133-0116." width="900" height="1350">
+      <img src="img/show-trilha-sonora.webp" alt="Cartaz do show A Trilha Sonora de uma Geração: Conservatório Musical Schumann, 30 anos em Ilhéus. Centro de Convenções, quinta-feira, 29 de outubro, às 19 horas. Valor integral R$ 100,00; segundo lote R$ 50,00 mais 1 kg de alimento, até 20 de outubro. WhatsApp (73) 99133-0116." width="900" height="1350">
       <em class="esgotado">1º lote<br>esgotado</em>
       <span><svg width="22" height="22" aria-hidden="true"><use href="#zap"/></svg>Compre aqui · toque no cartaz</span>
     </a>
@@ -368,18 +378,19 @@ input:focus,select:focus{outline:none;border-color:var(--ouro)}
       <p class="rot">O show dos 30 anos</p>
       <h2>A Trilha Sonora <b>de uma Geração</b></h2>
       <p class="sub" style="color:var(--on-vinho)">Um show de música instrumental e vocal, com professores, alunos e músicos formados pela casa.</p>
-      <span class="falta">1º lote esgotado</span> <span class="falta claro" data-promo>R$ 50 só até 20 de outubro</span>
+      <span class="falta">1º lote esgotado</span> <span class="falta claro" data-promo>R$ 50 + 1 kg de alimento até 20 de outubro</span>
       <ul class="dados">
         <li><small>Data</small><b>Quinta-feira, 29 de outubro</b></li>
         <li><small>Horário</small><b>19 horas, pontualmente</b></li>
         <li><small>Local</small><b>Centro de Convenções de Ilhéus</b></li>
-        <li><small>Ingresso</small><b data-promo><s>R$ 100,00</s> R$ 50,00 até 20 de outubro</b><b data-cheio hidden>R$ 100,00</b></li>
+        <li><small>Ingresso</small><b data-promo><s>R$ 100,00</s> R$ 50,00 + 1 kg de alimento, até 20 de outubro</b><b data-cheio hidden>R$ 100,00</b></li>
       </ul>
       <div class="compra">
         <div class="bilhete" data-promo>
           <div class="cheio"><small>Valor integral</small><s>R$ 100,00</s></div>
-          <div class="lote"><small>Segundo lote <i>(até 20 de outubro)</i></small><b>R$ 50,00</b><em>(meia entrada)</em></div>
+          <div class="lote"><small>Segundo lote <i>(até 20 de outubro)</i></small><b>R$ 50,00</b><em class="kg"><svg class="ico-al" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 7V6a5 5 0 0 1 10 0v1h2.2a1 1 0 0 1 1 .9l1.3 12A2 2 0 0 1 19.5 22h-15a2 2 0 0 1-2-2.1l1.3-12a1 1 0 0 1 1-.9zm2 0h6V6a3 3 0 0 0-6 0zm3 4.2c-1.3-1.5-4-1.1-4 1.2 0 2 2.5 3.6 4 4.6 1.5-1 4-2.6 4-4.6 0-2.3-2.7-2.7-4-1.2z"/></svg>+ 1 kg alimento</em></div>
         </div>
+        <div class="solidario" data-promo><svg class="ico-al" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 7V6a5 5 0 0 1 10 0v1h2.2a1 1 0 0 1 1 .9l1.3 12A2 2 0 0 1 19.5 22h-15a2 2 0 0 1-2-2.1l1.3-12a1 1 0 0 1 1-.9zm2 0h6V6a3 3 0 0 0-6 0zm3 4.2c-1.3-1.5-4-1.1-4 1.2 0 2 2.5 3.6 4 4.6 1.5-1 4-2.6 4-4.6 0-2.3-2.7-2.7-4-1.2z"/></svg><p><b>Ingresso solidário</b>Leve 1 kg de alimento não perecível no dia do show. Tudo o que for arrecadado vai para trabalho social.</p></div>
         <div class="bilhete um" data-cheio hidden><div class="lote"><small>Ingresso</small><b>R$ 100,00</b></div></div>
         <div class="compra-top">
           <div><small>Total</small><b id="total">R$ 50,00</b></div>
@@ -530,7 +541,7 @@ input:focus,select:focus{outline:none;border-color:var(--ouro)}
   <div class="w">
     <div><p class="rot">Dúvidas</p><h2>Perguntas <b>frequentes</b></h2></div>
     <div class="lista">
-      <details data-so-show open><summary>Como compro o ingresso do show?</summary><p>Pelo WhatsApp (73) 99133-0116. Diga quantos ingressos quer e a escola combina o pagamento e a entrega. O 1º lote esgotou. No 2º lote, o ingresso de R$ 100,00 sai por R$ 50,00 até 20 de outubro.</p></details>
+      <details data-so-show open><summary>Como compro o ingresso do show?</summary><p>Pelo WhatsApp (73) 99133-0116. Diga quantos ingressos quer e a escola combina o pagamento e a entrega. O 1º lote esgotou. No 2º lote, o ingresso de R$ 100,00 sai por R$ 50,00 mais a doação de 1 kg de alimento não perecível, até 20 de outubro. Os alimentos vão para trabalho social.</p></details>
       <details><summary>Meu filho nunca tocou. Ele pode começar?</summary><p>Pode. O curso começa do primeiro dia, com instrumento e teoria juntos, no ritmo dele.</p></details>
       <details><summary>Com que idade dá para começar?</summary><p>Os pequenos começam na musicalização infantil. Na aula experimental a gente indica o curso certo para a idade.</p></details>
       <details><summary>Adulto que nunca tocou pode aprender?</summary><p>Pode. Os cursos são para crianças, jovens e adultos, do iniciante ao avançado.</p></details>
@@ -557,7 +568,7 @@ input:focus,select:focus{outline:none;border-color:var(--ouro)}
 </footer>
 
 <a class="bola" id="bola" href="https://wa.me/5573991330116?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Conservat%C3%B3rio%20Schumann." target="_blank" rel="noopener" aria-label="Falar no WhatsApp (73) 99133-0116"><svg width="32" height="32" aria-hidden="true"><use href="#zap"/></svg></a>
-<div class="barra"><a class="btn zap" id="barra-btn" href="#" target="_blank" rel="noopener"><svg width="24" height="24" aria-hidden="true"><use href="#zap"/></svg><span id="barra-txt">Comprar ingresso · R$ 50</span></a></div>
+<div class="barra"><a class="btn zap" id="barra-btn" href="#" target="_blank" rel="noopener"><svg width="24" height="24" aria-hidden="true"><use href="#zap"/></svg><span id="barra-txt">Ingresso R$ 50 + 1 kg alimento</span></a></div>
 </div>
 
 <script>
@@ -580,7 +591,7 @@ var agora=new Date(),showAtivo=agora<FIM,promo=agora<PROMO_FIM,PRECO=promo?50:10
 $$("[data-promo]").forEach(function(e){e.hidden=!promo});$$("[data-cheio]").forEach(function(e){e.hidden=promo});
 function atualizaShow(){
   $("#qtd").textContent=q;$("#total").textContent=reais(PRECO*q);
-  var msg="Olá! Quero comprar "+q+" ingresso"+(q>1?"s":"")+" para o show A Trilha Sonora de uma Geração (29/10, às 19h, no Centro de Convenções). Total: "+reais(PRECO*q)+". Como faço o pagamento?";
+  var msg="Olá! Quero comprar "+q+" ingresso"+(q>1?"s":"")+" para o show A Trilha Sonora de uma Geração (29/10, às 19h, no Centro de Convenções). Total: "+reais(PRECO*q)+(promo?" + "+q+" kg de alimento para doação":"")+". Como faço o pagamento?";
   var link=WA+encodeURIComponent(msg);
   $("#comprar").href=link;$("#cartaz").href=link;if(showAtivo)$("#barra-btn").href=link;
 }
@@ -593,7 +604,7 @@ function tique(){
 }
 if(showAtivo){
   tique();setInterval(tique,1000);
-  $("#barra-txt").textContent=promo?"Ingresso de R$ 100 por R$ 50":"Comprar ingresso · R$ 100";
+  $("#barra-txt").textContent=promo?"Ingresso R$ 50 + 1 kg alimento":"Comprar ingresso · R$ 100";
 }else{
   $$("[data-so-show]").forEach(function(e){e.hidden=true});
   var tb=$("#topo-btn");tb.textContent="Agendar aula";tb.href=AULA;tb.target="_blank";tb.rel="noopener";
